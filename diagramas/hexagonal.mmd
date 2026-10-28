@@ -1,0 +1,8 @@
+flowchart LR
+    HTTP["Adaptador HTTP/REST"] --> PE{{"Porta de entrada<br/>ProcessarNovoPedido"}}
+    subgraph Hex["Núcleo da aplicação"]
+        PE --> N["Regras de negócio<br/>Pedido e caso de uso"]
+        N --> PS{{"Porta de saída<br/>PedidoRepository"}}
+    end
+    DB["Adaptador JPA"] -. implementa .-> PS
+    TST["Adaptador de teste em memória"] -. implementa .-> PS
