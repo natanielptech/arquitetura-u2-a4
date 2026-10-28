@@ -1,0 +1,13 @@
+flowchart TB
+    subgraph FD["4 · Frameworks e Drivers"]
+        subgraph IA["3 · Adaptadores de Interface"]
+            subgraph UC["2 · Casos de Uso"]
+                subgraph EN["1 · Entidades"]
+                    E["Regras de negócio gerais e estáveis"]
+                end
+                U["Regras específicas da aplicação"]
+            end
+            I["Controllers · Gateways"]
+        end
+        F["Spring Boot · JPA · H2"]
+    end

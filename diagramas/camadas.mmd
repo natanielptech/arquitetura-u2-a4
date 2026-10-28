@@ -1,0 +1,4 @@
+flowchart TB
+    A["Apresentação"] --> B["Aplicação / Negócio"] --> C["Dados"]
+    C --> D[("Banco de dados específico")]
+    B -. "vazamento de tecnologia de persistência" .-> D
